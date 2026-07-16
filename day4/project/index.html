@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Changer</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1> Welcome
+            <strong id="title"></strong>
+        </h1>
+
+        <h2 id="emoji">🙂</h2>
+
+        <p id="message">How are you feeling today?</p>
+
+        <button onclick="changeMood('happy')">😊 Happy</button>
+
+        <button onclick="changeMood('sad')">😢 Sad</button>
+
+        <button onclick="changeMood('angry')">😡 Angry</button>
+
+        <button onclick="changeMood('sleepy')">😴 Sleepy</button>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
