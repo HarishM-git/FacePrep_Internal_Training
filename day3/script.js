@@ -1,8 +1,8 @@
 // learning the varailble
 
-let a = document.getElementById("heading");
-let b = document.getElementById("text");
-let c = document.getElementById("result");
+let a =document.getElementById("heading");
+let b =document.getElementById("text");
+let c =document.getElementById("result");
 
 // let x = 100;
 // console.log(x);
@@ -23,17 +23,17 @@ function changeMessage(){
 
 function changeColor(){
 
-    if(colorNumber == 0){
+    if(colorNumber== 0){
 
         document.body.style.backgroundColor = "lightblue";
-        colorNumber = 1;
+        colorNumber= 1;
 
     }
 
     else{
 
         document.body.style.backgroundColor = "#eeeeee";
-        colorNumber = 0;
+        colorNumber =0;
 
     }
 
@@ -41,23 +41,23 @@ function changeColor(){
 
 function askName(){
 
-    let name = prompt("Enter your name");
+    let name =prompt("Enter your name");
 
-    if(name == ""){
+    if(name ==""){
 
         c.innerHTML = "You didn't type anything.";
 
     }
 
-    else if(name == null){
+    else if(name== null){
 
-        c.innerHTML = "Prompt was cancelled.";
+        c.innerHTML="Prompt was cancelled.";
 
     }
 
     else{
 
-        c.innerHTML = "Hello " + name;
+        c.innerHTML ="Hello "+ name;
 
     }
 
@@ -65,32 +65,11 @@ function askName(){
 
 function showNumber(){
 
-    let num = Math.floor(Math.random() * 100) + 1;
+    let num =Math.floor(Math.random() * 100) + 1;
 
-    c.innerHTML = "Random Number : " + num;
+    c.innerHTML ="Random Number : " +num;
 
 }
-
-// Practice
-
-// let marks = 75;
-
-// if(marks >= 50){
-//     console.log("Pass");
-// }
-// else{
-//     console.log("Fail");
-// }
-
-// let age = 20;
-
-// if(age >= 18){
-//     console.log("Can Vote");
-// }
-
-// for(let i=1;i<=5;i++){
-//     console.log(i);
-// }
 
 // let arr = [10,20,30];
 
@@ -119,7 +98,7 @@ function increaseCount(){
 
     count++;
 
-    document.getElementById("countText").innerHTML = "Count : " + count;
+    document.getElementById("countText").innerHTML ="Count : " + count;
 
 }
 
@@ -127,6 +106,23 @@ function decreaseCount(){
 
     count--;
 
-    document.getElementById("countText").innerHTML = "Count : " + count;
+    document.getElementById("countText").innerHTML ="Count : " + count;
 
+}
+
+
+function changeText() {
+    console.log("Debug");
+    document.getElementById("mainText").innerText ="You successfully clicked the button!";
+}
+
+function toggleColor() {
+    let textElement = document.getElementById("mainText");
+    console.log("Debugging - Current color is:", textElement.style.color);
+    
+    if (textElement.style.color ==="red") {
+        textElement.style.color ="black";
+    } else {
+        textElement.style.color = "red";
+    }
 }

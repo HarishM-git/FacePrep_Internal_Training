@@ -51,6 +51,8 @@ function showArray(){
 //     console.log("Small Number");
 
 // }
+
+
 function addFruit(){
 
     let newFruit = prompt("Enter Fruit Name");

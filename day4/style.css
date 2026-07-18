@@ -1,7 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333333;
+
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
@@ -32,6 +30,15 @@ button {
 
 button:hover {
   background-color: #2980b9;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
 }
 
 input[type="text"] {
