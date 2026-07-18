@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
             <hr>
 
         <h2>Day 4 Practice</h2>
+        
+        <button  onclick="increment()">Click to Increase value</button>
+        <button  onclick="decrement()">Click to Decrement value</button>
+
+        <div id="countContainer">0</div>
 
         <input type="text" id="wordInput" placeholder="Enter a word">
 
         <button onclick="makeUpperCase()">
             Upper Case
+        </button>
+        <button onclick="makeLowerCase()">
+            Lower Case
         </button>
 
         <button onclick="countLetters()">
@@ -55,10 +64,7 @@
 
 <p id="confirmResult"></p>
     <script>
-        let a=prompt("Hello how are you what is you name")
-        console.log(a)
-        <!-- alert("Hello how are you") -->
-        
+       
     </script>
 </body>
 </html>

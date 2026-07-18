@@ -11,6 +11,12 @@ function decrement(){
 
 }
 
+
+//  <!-- let a=prompt("Hello how are you what is you name") -->;
+//         console.log(a);
+        
+//         <!-- alert("Hello how are you "+a)  -->
+        
 // function add(a,b){
 
 //     return a+b;
@@ -72,6 +78,13 @@ function makeUpperCase(){
     document.getElementById("wordResult").innerHTML = word.toUpperCase();
 
 }
+function makeLowerCase(){
+
+    let word = document.getElementById("wordInput").value;
+
+    document.getElementById("wordResult").innerHTML = word.toLowerCase();
+
+}
 
 
 // let numbers = [10,20,30,40];
@@ -116,7 +129,7 @@ function printNumbers(){
 
     let text = "";
 
-    for(let i = 1; i <= 10; i++){
+    for(let i = 1; i <= 200; i++){
 
         text = text + i + " ";
 
