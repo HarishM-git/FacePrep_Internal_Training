@@ -1,0 +1,16 @@
+.Board-ct{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  /* margin-top: 150px; */
+
+}
+.E-cells{
+  height:60px;
+  width:60px;
+  
+}
+h1{
+  text-align:center;
+}

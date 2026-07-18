@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <a href="https://docs.google.com/spreadsheets/d/18ZzTj0LvHURmW3dLV-i0s2wf35Si72VutHzZm8zwGS0/edit?gid=602156757#gid=602156757">
-            <h1>Welcome students</h1>
-        </a>
-        <h2 class="title" styles="text-align:center">welcome students</h2>
-        <p>This is my training website</p>
-        
-        <button onclick="Alerting()">
-            alert
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-box">
+
+        <h1 id="heading">Learning JavaScript</h1>
+
+        <p id="text">
+            Click the buttons below and see what happens.
+        </p>
+
+        <button onclick="changeMessage()">
+            Change Text
         </button>
 
+        <button onclick="changeColor()">
+            Change Color
+        </button>
 
-    </body>
+        <button onclick="askName()">
+            Enter Name
+        </button>
+
+        <button onclick="showNumber()">
+            Random Number
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+            <hr>
+
+        <h2>More Practice</h2>
+
+        <p id="countText">Count : 0</p>
+
+        <button onclick="increaseCount()">
+            Increase
+        </button>
+
+        <button onclick="decreaseCount()">
+            Decrease
+        </button>
+
+        <br><br>
+
+        <input type="text" id="userInput" placeholder="Type something">
+
+        <button onclick="showInput()">
+            Show Text
+        </button>
+
+        <br><br>
+
+        <button onclick="changeHeadingColor()">
+            Change Heading Color
+        </button>
+
+        <button onclick="resetEverything()">
+            Reset
+        </button>
+
+<p id="outputText"></p>
+    <script src="script.js"></script>
+
+</body>
 </html>

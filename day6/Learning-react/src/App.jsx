@@ -3,37 +3,53 @@ import './App.css'
 
 function App() {
 
-    const [count,setCount]=useState(0);
-    function HandleEvent(){
-      console.log("Button is Clicked");
-      setCount(count+1);
-    }
+      return <>
 
-    return (
-      <div>
-        <h1>Hello</h1>
-        <button cou={count} onClick={HandleEvent}>Click me {count}</button>
-        <button cou={count} onClick={HandleEvent}>Click me {count}</button>
-      </div>
+              <Board/>
 
-      
-    );
-
-
+              </>
 
 }
 
-function Button(){
-    const [count,setCount]=useState(0);
-    function HandleEvent(){
-      console.log("Button is Clicked");
-      setCount(count+1);
+
+function Board(){
+  return <>
+          <h1>TIC TAC TOE</h1>
+                  <div className="Board-ct">
+
+                      <div className="Board-row">
+                        <Square/>
+                        <Square/>
+                        <Square/>
+
+                      </div>
+                      <div className="Board-row">
+                        <Square/>
+                        <Square/>
+                        <Square/>
+
+                      </div>
+                      <div className="Board-row">
+                        <Square/>
+                        <Square/>
+                        <Square/>
+
+                      </div>
+
+                  </div>
+        </>
+}
+
+function Square(){
+    const [value,setValue]=useState(null);
+    function HandleClick(){
+      // console.log('X');
+      setValue('x');
     }
-    return (
-      <button onClick={HandleEvent}>
-        Click Me to increase {count}
-      </button>
-    )
+  return <>
+            <button className="E-cells" onClick={HandleClick}>{value}</button>
+
+          </>
 }
 
 export default App
