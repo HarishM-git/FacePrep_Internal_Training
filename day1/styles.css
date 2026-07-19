@@ -67,3 +67,9 @@ th {
     background-color: blue;
     color: white;
 }
+
+@media screen and (max-width:1000px){
+    body{
+        background-color:#0056b3;
+    }
+}   
