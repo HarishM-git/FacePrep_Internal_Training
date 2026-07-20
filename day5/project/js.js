@@ -71,3 +71,74 @@ function myMove(move){
         document.getElementById('result').style="color:green"
     }
 }
+
+
+let input=document.getElementById('oe');
+let sub=document.getElementById('su');
+function HandleSub(){
+    let nu=+(input.value);
+    if (nu%2==0){
+        document.getElementById('re').innerText="Even";
+    }
+    else{
+        document.getElementById('re').innerText="Odd";
+    }
+}
+
+sub.addEventListener('click',HandleSub);
+
+let arr=[15,216,2,54,3,8]
+let a=0
+arr.forEach(num=>{
+    if (num>a){
+        // console.log(num);
+        a=num;
+
+
+    }
+    return a;
+})
+console.log(a);
+
+let ty=document.querySelector('div');
+
+console.log(ty.children[0])
+
+let uu=document.createElement('h1');
+uu.textContent="HEllo Bhai";
+document.body.appendChild(uu);
+let cu=document.createElement('h1');
+cu.textContent="Hi"
+cu.classList.add('check');
+document.body.appendChild(cu);
+let iu=document.getElementsByClassName('check');
+iu[0].style.backgroundColor="yellow";
+
+
+// let items = document.querySelectorAll("li");
+
+// items.forEach(item => {
+
+//     item.addEventListener("click", () => {
+
+//         console.log(item.textContent);
+        
+//     });
+
+// });
+
+let ite=document.getElementById('yum');
+
+ite.addEventListener('click',(eve)=>{
+    console.log(eve.target.textContent);
+})
+
+let form = document.getElementById("myForm");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    console.log("Form Submitted");
+
+});
