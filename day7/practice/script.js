@@ -114,19 +114,22 @@ Showing();
 
 // demo();
 
-
+let ll=document.getElementById('datava');
 async function getData(){
-    let re=await fetch("https://jsonplaceholder.typicode.com/posts/1")
+    let re=await fetch("https://jsonplaceholder.typicode.com/posts")
     .then((res)=>res.json())
     .catch(e=>e);
-    // console.log(re)
-    // if (!re.ok){
-    //     throw new Error("Now working")
-    // }   
+    console.log(re)
+    alert("data Loaded sucessfully the blog data see in console ")
+    // re.forEach((user)=>{
+        
+    //     let dd=document.createElement('li');
+    //     dd.innerText=`${user.id} ${user.title}`;
+    //     ll.append(dd);
+        
+    // })
     
 }
-console.log(getData());
+getData();
 
-
-console.log("Hello this is last line");
 
