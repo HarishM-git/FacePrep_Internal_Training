@@ -48,8 +48,7 @@ function Square(){
     }
   return <>
             <button className="E-cells" onClick={HandleClick}>{value}</button>
-
-          </>
+        </>
 }
 
 export default App

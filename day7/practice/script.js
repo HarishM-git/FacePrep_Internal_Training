@@ -68,9 +68,9 @@ function addEvent(){
 
 
 submit.addEventListener('click',addEvent);
-list.innerText="Loading Your Past Tasks Hang Tight Bro..."
-setTimeout(()=>Showing(),3000)
-
+// list.innerText="Loading Your Past Tasks Hang Tight Bro..."
+// setTimeout(()=>Showing(),3000)
+Showing();
 
 // function calculate(comeon){
 //     comeon(10,20);
@@ -84,32 +84,49 @@ setTimeout(()=>Showing(),3000)
 
 //asynchronous functions how it works in js 
 
-let promise= new Promise((res,err)=>{
-    // let stat=false;
-    // if(stat){
-    //     res("Result is sucessus");
-    // }
-    // else{
-    //     err("some error happened");
-    // }
-    console.log("Loading....")
-    setTimeout((r)=>{res("sucess")},3000);
-})
+// let promise= new Promise((res,err)=>{
+//     // let stat=false;
+//     // if(stat){
+//     //     res("Result is sucessus");
+//     // }
+//     // else{
+//     //     err("some error happened");
+//     // }
+//     console.log("Loading....")
+//     setTimeout((r)=>{res("sucess")},3000);
+// })
 
-console.log(promise.then((r)=>console.log(r)).catch((e)=>console.log(e)))
+// console.log(promise.then((r)=>console.log(r)).catch((e)=>console.log(e)))
 
 
-function getDelayed(num){
-    return new Promise((res)=>{setTimeout(()=>res(num),num*1000)});
+// function getDelayed(num){
+//     return new Promise((res)=>{setTimeout(()=>res(num),num*1000)});
+// }
+
+// async function demo(){
+//     console.log("Hello");
+//     let a=await getDelayed(3);
+//     console.log(a)
+//     let b=await getDelayed(5);
+//     console.log(b)
+//     console.log(a+b)
+// }
+
+// demo();
+
+
+async function getData(){
+    let re=await fetch("https://jsonplaceholder.typicode.com/posts/1")
+    .then((res)=>res.json())
+    .catch(e=>e);
+    // console.log(re)
+    // if (!re.ok){
+    //     throw new Error("Now working")
+    // }   
+    
 }
+console.log(getData());
 
-async function demo(){
-    console.log("Hello");
-    let a=await getDelayed(3);
-    console.log(a)
-    let b=await getDelayed(5);
-    console.log(b)
-    console.log(a+b)
-}
 
-demo();
+console.log("Hello this is last line");
+
