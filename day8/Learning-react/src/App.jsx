@@ -4,15 +4,14 @@ import './App.css'
 function App() {
 
       return <>
-              <Board/>
+              <Game/>
             </>
 
 }
 
 
-function Board(){
-  let [square,setSquare]=useState(Array(9).fill(null));
-  let [xIsNext,setXY]=useState(true);
+function Board({xIsNext,square,onPlay}){
+
   const winner = DecideWinner(square);
   let stat;
   if (winner) {
@@ -33,8 +32,7 @@ function Board(){
     else{
       dup[i]='O';
     }
-    setXY(!xIsNext);
-    setSquare(dup);
+    onPlay(dup);
     // let winner=DecideWinner(dup);
     // console.log(winner);
     // if (winner){
@@ -47,7 +45,7 @@ function Board(){
   console.log("Next Move",xIsNext?"X":"O")
   return <>
           <h1>TIC TAC TOE</h1>
-                <div className="result" style={{'text-align':'center'}}>{stat}</div>
+                <div className="result" style={{textAlign:'center'}}>{stat}</div>
                   <div className="Board-ct">
 
                       <div className="Board-row">
@@ -105,5 +103,70 @@ function DecideWinner(square){
   }
   return null;
 }
+
+
+function Game(){
+  let [xIsNext,setXY]=useState(true);
+  let [history,setHistory]=useState([Array(9).fill(null)]);
+  let [currentMove, setCurrentMove]=useState(0);
+  let [showHistory,setShowHistory]=useState(false);
+  const cur=history[currentMove];
+  function HandlePlay(changed){  
+    console.log(changed)
+    const updateH=[...history.slice(0,currentMove+1),changed];
+    setHistory(updateH);
+    setCurrentMove(updateH.length-1);
+    setXY(!xIsNext);
+
+  }
+  function jumpTo(i){
+    setCurrentMove(i)
+    console.log(cur,i,"suma");
+    setXY(i%2===0);
+    // <Board xIsNext={xIsNext} square={cur} onPlay={HandlePlay}/>
+    
+  }
+  function showAll(){
+    // console.log("show all values in history:",history);
+    setShowHistory(!showHistory);
+    
+  } 
+  const move=history.map((item,i)=>{
+    let des;
+    if (i>0){
+      des=`move to this #${i} step`;
+    }
+    else{
+      des='move to first move'
+    }
+    return <li key={i} ><button onClick={()=>jumpTo(i)}> {des}</button></li>
+  })
+
+  return <>
+      <div>
+        <Board xIsNext={xIsNext} square={cur} onPlay={HandlePlay}/>
+
+      </div>
+
+        <div>
+          <ol className="hist">
+              {move}
+          </ol>
+        </div>
+        <div>
+          {showHistory && (
+              <div style={{ marginTop: '20px', padding: '10px', background: '#f4f4f4', color: '#333', borderRadius: '5px' }}>
+                <h3>Game History Log (JSON Data):</h3>
+                <pre style={{ textAlign: 'left', fontSize: '14px' }}>
+                  {JSON.stringify(history, null,3)}
+                </pre>
+      </div>
+    )}
+          <button onClick={showAll}>{showHistory?"Hide History":"Show History"}</button>
+        </div>
+        </>
+}
+
+
 
 export default App

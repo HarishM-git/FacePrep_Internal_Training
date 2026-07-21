@@ -21,3 +21,7 @@ h1{
     font-size:x-large;
     padding-top:50px;
 }
+
+body{
+  padding-bottom:1000px;
+}
