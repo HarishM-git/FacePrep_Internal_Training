@@ -1,0 +1,23 @@
+.Board-ct{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-top: 100px;
+
+}
+.E-cells{
+  height:60px;
+  width:60px;
+  vertical-align: top;
+  font-size:x-large
+  
+}
+h1{
+  text-align:center;
+}
+
+.result{
+    font-size:x-large;
+    padding-top:50px;
+}
